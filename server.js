@@ -137,13 +137,13 @@ socket.on("JOIN_ROOM",function(_pack){
 	
 	powerUpSpawnPoints.splice(0,powerUpSpawnPoints.length); // clear the powerup list
 	
-	var amount = 100;
+	var amount = 400;
 	 
 	 //spawn 100 power ups in game
-	 for (var i = 0; i < 100; i++)
+	 for (var i = 0; i < 400; i++)
      {
-	   var spawnX = (Math.floor(Math.random() * 20) );// choose a  x random position in game
-	   var spawnY = (Math.floor(Math.random() * 10) );// choose a  y random position in game
+	   var spawnX = (Math.floor(Math.random() * 100) );// choose a  x random position in game
+	   var spawnY = (Math.floor(Math.random() * 40) );// choose a  y random position in game
 	   
 	   var negativeXValue = (Math.floor(Math.random() * 2) ); // choose a negative or positive x position in game
 	   
