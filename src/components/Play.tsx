@@ -21,6 +21,10 @@ function Play_(props: PlayProps, ref: HTMLElementRefOf<"div">) {
   const [items, setItems] = useState<any>(null);
 
   useEffect(() => {
+    !walletAddress && setItems(null);
+  }, [walletAddress])
+
+  useEffect(() => {
     if (walletAddress) {
       getAssets().then((data) => {
         console.log("assets", data);
