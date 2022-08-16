@@ -37,7 +37,7 @@ function Header_(props: HeaderProps, ref: HTMLElementRefOf<"div">) {
       }}
       fractalButton={{
         onClick: handleFractalLogin,
-        children: <span>{ username? `${username} Logout` : "Login with Fractal" }</span>
+        children: <span>{ username? `Logout` : "Login with Fractal" }</span>
       }}
       {...props}
     />
