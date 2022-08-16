@@ -57,20 +57,30 @@ export type PlasmicPlay__VariantsArgs = {};
 type VariantPropType = keyof PlasmicPlay__VariantsArgs;
 export const PlasmicPlay__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicPlay__ArgsType = {};
+export type PlasmicPlay__ArgsType = {
+  unity?: React.ReactNode;
+  ticketImage?: React.ReactNode;
+};
+
 type ArgPropType = keyof PlasmicPlay__ArgsType;
-export const PlasmicPlay__ArgProps = new Array<ArgPropType>();
+export const PlasmicPlay__ArgProps = new Array<ArgPropType>(
+  "unity",
+  "ticketImage"
+);
 
 export type PlasmicPlay__OverridesType = {
   root?: p.Flex<"div">;
   header?: p.Flex<typeof Header>;
   section?: p.Flex<typeof Section>;
   replaceWithUnity?: p.Flex<typeof p.PlasmicImg>;
+  img?: p.Flex<typeof p.PlasmicImg>;
   homeCta?: p.Flex<typeof HomeCta>;
   footer?: p.Flex<typeof Footer>;
 };
 
 export interface DefaultPlayProps {
+  unity?: React.ReactNode;
+  ticketImage?: React.ReactNode;
   className?: string;
 }
 
@@ -193,25 +203,39 @@ function PlasmicPlay__RenderFunc(props: {
                           sty.column___2Lrrq
                         )}
                       >
-                        <p.PlasmicImg
-                          data-plasmic-name={"replaceWithUnity"}
-                          data-plasmic-override={overrides.replaceWithUnity}
-                          alt={""}
-                          className={classNames(sty.replaceWithUnity)}
-                          displayHeight={"500px" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"700px" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: fatbeastsLogoKGMclZFzT,
-                            fullWidth: 1443,
-                            fullHeight: 767,
-                            aspectRatio: undefined
-                          }}
-                        />
+                        {true ? (
+                          <p.PlasmicImg
+                            data-plasmic-name={"replaceWithUnity"}
+                            data-plasmic-override={overrides.replaceWithUnity}
+                            alt={""}
+                            className={classNames(sty.replaceWithUnity)}
+                            displayHeight={"500px" as const}
+                            displayMaxHeight={"none" as const}
+                            displayMaxWidth={"100%" as const}
+                            displayMinHeight={"0" as const}
+                            displayMinWidth={"0" as const}
+                            displayWidth={"700px" as const}
+                            loading={"lazy" as const}
+                            src={{
+                              src: fatbeastsLogoKGMclZFzT,
+                              fullWidth: 1443,
+                              fullHeight: 767,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        ) : null}
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___4GuZv
+                          )}
+                        >
+                          {p.renderPlasmicSlot({
+                            defaultContents: null,
+                            value: args.unity
+                          })}
+                        </div>
                       </div>
 
                       <div
@@ -220,23 +244,29 @@ function PlasmicPlay__RenderFunc(props: {
                           sty.column__swIj9
                         )}
                       >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__lbdn0)}
-                          displayHeight={"auto" as const}
-                          displayMaxHeight={"none" as const}
-                          displayMaxWidth={"100%" as const}
-                          displayMinHeight={"0" as const}
-                          displayMinWidth={"0" as const}
-                          displayWidth={"auto" as const}
-                          loading={"lazy" as const}
-                          src={{
-                            src: screenShot20220811At14301PMjpgLv6S5GuM,
-                            fullWidth: 400,
-                            fullHeight: 908,
-                            aspectRatio: undefined
-                          }}
-                        />
+                        {p.renderPlasmicSlot({
+                          defaultContents: (
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__hBXdN)}
+                              displayHeight={"458px" as const}
+                              displayMaxHeight={"none" as const}
+                              displayMaxWidth={"100%" as const}
+                              displayMinHeight={"0" as const}
+                              displayMinWidth={"0" as const}
+                              displayWidth={"auto" as const}
+                              loading={"lazy" as const}
+                              src={{
+                                src: screenShot20220811At14301PMjpgLv6S5GuM,
+                                fullWidth: 400,
+                                fullHeight: 908,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          ),
+
+                          value: args.ticketImage
+                        })}
                       </div>
                     </div>
                   </div>
@@ -255,8 +285,10 @@ function PlasmicPlay__RenderFunc(props: {
                           )}
                         >
                           <p.PlasmicImg
+                            data-plasmic-name={"img"}
+                            data-plasmic-override={overrides.img}
                             alt={""}
-                            className={classNames(sty.img__dbI1)}
+                            className={classNames(sty.img)}
                             displayHeight={"auto" as const}
                             displayMaxHeight={"none" as const}
                             displayMaxWidth={"none" as const}
@@ -412,10 +444,19 @@ function PlasmicPlay__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "section", "replaceWithUnity", "homeCta", "footer"],
+  root: [
+    "root",
+    "header",
+    "section",
+    "replaceWithUnity",
+    "img",
+    "homeCta",
+    "footer"
+  ],
   header: ["header"],
-  section: ["section", "replaceWithUnity"],
+  section: ["section", "replaceWithUnity", "img"],
   replaceWithUnity: ["replaceWithUnity"],
+  img: ["img"],
   homeCta: ["homeCta"],
   footer: ["footer"]
 } as const;
@@ -427,6 +468,7 @@ type NodeDefaultElementType = {
   header: typeof Header;
   section: typeof Section;
   replaceWithUnity: typeof p.PlasmicImg;
+  img: typeof p.PlasmicImg;
   homeCta: typeof HomeCta;
   footer: typeof Footer;
 };
@@ -495,6 +537,7 @@ export const PlasmicPlay = Object.assign(
     header: makeNodeComponent("header"),
     section: makeNodeComponent("section"),
     replaceWithUnity: makeNodeComponent("replaceWithUnity"),
+    img: makeNodeComponent("img"),
     homeCta: makeNodeComponent("homeCta"),
     footer: makeNodeComponent("footer"),
 

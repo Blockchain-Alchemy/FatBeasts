@@ -12,15 +12,13 @@ const useWallet = () => {
     setEmail,
     username,
     setUsername,
-    publicKey,
-    setPublicKey,
     bearerToken,
     setBearerToken
   } = useFractalContext()!;
   const [approvalUrl, setApprovalUrl] = useState(undefined);
   const [approvalCode, setApprovalCode] = useState(undefined);
   const [approver, setApprover] = useState(0);
-  const [userId, setUserId] = useState(null);
+  //const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     if (approvalUrl) {
@@ -49,14 +47,14 @@ const useWallet = () => {
           console.log("Interval-2", data);
           setApprover(0);
           setBearerToken(data.bearerToken);
-          setUserId(data.userId);
+          //setUserId(data.userId);
         })
         .catch((e) => {
           setTimeout(() => {
             setApprover(approver + 1);
           }, 4000);
         });
-  }, [approver, getApprovalResult]);
+  }, [approver, getApprovalResult, setBearerToken]);
 
   useEffect(() => {
     if (bearerToken) {
@@ -73,7 +71,7 @@ const useWallet = () => {
         setUsername(res.data.username);
       });
     }
-  }, [walletAddress, bearerToken]);
+  }, [walletAddress, bearerToken, setWalletAddress, setEmail, setUsername]);
 
   const connectWallet = useCallback(() => {
     const url = `https://auth-api.fractal.is/auth/v2/approval/geturl?clientId=${CLIENT_ID}&scope=items:read&scope=identify&scope=coins:read`;
@@ -86,7 +84,7 @@ const useWallet = () => {
       .catch((e) => {
         console.error(e);
       });
-  }, [setWalletAddress, setPublicKey]);
+  }, [setApprovalUrl, setApprovalCode]);
 
   const disconnectWallet = async (): Promise<void> => {
     setWalletAddress(undefined);
@@ -101,7 +99,6 @@ const useWallet = () => {
     email,
     username,
     walletAddress,
-    publicKey,
   };
 };
 

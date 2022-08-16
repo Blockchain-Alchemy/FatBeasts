@@ -19,7 +19,7 @@ const useAssets = () => {
         return Promise.reject("Please connect your wallet");
       }
     },
-    [walletAddress]
+    [walletAddress, bearerToken]
   );
 
   return {
