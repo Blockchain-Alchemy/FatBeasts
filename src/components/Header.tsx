@@ -12,8 +12,6 @@ export interface HeaderProps extends DefaultHeaderProps {}
 function Header_(props: HeaderProps, ref: HTMLElementRefOf<"div">) {
   const history = useHistory();
   const { walletAddress, username, connectWallet, disconnectWallet } = useWallet();
-  console.log('walletAddress', walletAddress)
-  console.log('username', username)
 
   const handlePlayButton = (e: any) => {
     e.preventDefault();

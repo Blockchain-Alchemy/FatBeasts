@@ -19,6 +19,7 @@ const unityContext = new UnityContext({
 function Play_(props: PlayProps, ref: HTMLElementRefOf<"div">) {
   const { walletAddress, getAssets } = useAssets();
   const [items, setItems] = useState<any>(null);
+  const [progression, setProgression] = useState(0);
 
   useEffect(() => {
     !walletAddress && setItems(null);
@@ -28,10 +29,22 @@ function Play_(props: PlayProps, ref: HTMLElementRefOf<"div">) {
     if (walletAddress) {
       getAssets().then((data) => {
         console.log("assets", data);
-        setItems(data.items)
+        setItems(data.items);
+        if (progression === 1) {
+          unityContext.send('AccessController', 'InsertCoin', 1);
+        }
       });
     }
-  }, [walletAddress, getAssets]);
+  }, [walletAddress, progression, getAssets]);
+
+  unityContext.on("progress", function (progression) {
+    setProgression(progression);
+    if (progression === 1) {
+      if (items && items.length > 0) {
+        unityContext.send('AccessController', 'InsertCoin', 1);
+      }
+    }
+  });
 
   const ticketImageView = () => {
     return (
