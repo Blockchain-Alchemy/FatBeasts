@@ -1,0 +1,180 @@
+.root {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: relative;
+  justify-content: space-between;
+  background: var(--token-dph1wZ7NjV9);
+  min-width: 0;
+  border-radius: 5px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+.freeBox__p1RGn {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  width: 60%;
+  max-width: var(--token-50MB7bXg-SdmqM);
+  background: linear-gradient(0deg, #ce9fff 0%, #56b9ff 100%) 0% 0% / 100% 100%
+    repeat;
+  padding: 64px 48px;
+}
+.freeBox__p1RGn > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.freeBox__p1RGn > :global(.__wab_flex-container) > *,
+.freeBox__p1RGn > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__p1RGn > :global(.__wab_flex-container) > picture > img,
+.freeBox__p1RGn
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 16px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__p1RGn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__p1RGn > :global(.__wab_flex-container) {
+    min-width: 0;
+  }
+}
+.text__gpSr {
+  position: relative;
+  color: var(--token-MftlTQLYr);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Joti One";
+}
+.text__toD8I {
+  position: relative;
+  color: #ffffff;
+}
+.freeBox___9O8D {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+}
+.freeBox___9O8D > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.freeBox___9O8D > :global(.__wab_flex-container) > *,
+.freeBox___9O8D > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox___9O8D > :global(.__wab_flex-container) > picture > img,
+.freeBox___9O8D
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___9O8D {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___9O8D > :global(.__wab_flex-container) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+    margin-top: calc(0px - 8px);
+    height: calc(100% + 8px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___9O8D > :global(.__wab_flex-container) > *,
+  .freeBox___9O8D > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox___9O8D > :global(.__wab_flex-container) > picture > img,
+  .freeBox___9O8D
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+}
+.textInput:global(.__wab_instance) {
+  position: relative;
+}
+.svg___9IsO {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__dtKub {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.button:global(.__wab_instance) {
+  position: relative;
+}
+.svg__vusqu {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__yaF0C {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.text__s8Jp9 {
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+}
+.freeBox__pqldZ {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 40%;
+  background: linear-gradient(0deg, #ce9fff 0%, #56b9ff 100%) 0% 0% / 100% 100%
+    repeat;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__pqldZ {
+    display: none;
+  }
+}
+.img {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.img > .__wab_img-spacer > img {
+  object-fit: cover;
+}
