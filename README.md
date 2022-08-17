@@ -1,25 +1,2 @@
-This is a React project bootstrapped with [`create-plasmic-app`](https://www.npmjs.com/package/create-plasmic-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run start
-```
-
-Open your browser to see the result.
-
-You can start editing your project in Plasmic Studio. The page auto-updates as you edit the project.
-
-## Learn More
-
-With Plasmic, you can enable non-developers on your team to publish pages and content into your website or app.
-
-To learn more about Plasmic, take a look at the following resources:
-
-- [Plasmic Website](https://www.plasmic.app/)
-- [Plasmic Documentation](https://docs.plasmic.app/learn/)
-- [Plasmic Slack Community](https://www.plasmic.app/slack)
-
-You can check out [the Plasmic GitHub repository](https://github.com/plasmicapp/plasmic) - your feedback and contributions are welcome!
+![FATBEASTS-LOGO_min1](https://user-images.githubusercontent.com/2120817/185229123-02fce84f-dc4e-4ad0-a311-f0de7c4a89b6.png)
+## FAT BEASTS is a blockchain-based multiplayer online game where you eat everything you can, and survive in an open-world nature simulation!
